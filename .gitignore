@@ -1,0 +1,8 @@
+### IntelliJ IDEA ###
+.idea
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+java_dsa_questions_answers.iml
+
+### MIS ###
