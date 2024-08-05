@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Dsa
 {
-    // 1
+    // problem 1
     public static int largestAdjacentSum(int[] a){
         int max = Integer.MIN_VALUE;
         for(int i=0;i<a.length-1;i++){
@@ -18,7 +18,7 @@ public class Dsa
         return max;
     }
 
-    // 2
+    // problem 2
     static int checkConcatenatedSum(int n, int catlen){
         int originalNumber = n;
         int totalSum = 0;
@@ -34,7 +34,7 @@ public class Dsa
         return  originalNumber == totalSum ? 1 : 0;
     }
 
-   // 3
+   // problem 3
     static int equivalentArrays(int[] a1,int[] a2){
         Map<Integer,Integer> mapOne = new HashMap<>();
         Map<Integer,Integer> mapTwo = new HashMap<>();
@@ -58,7 +58,7 @@ public class Dsa
         return 1;
     }
 
-   // 4
+   // problem 4
     public static int hasSingleMaximum(int[] arr){
         if(arr.length == 0 ) return 0;
 
@@ -77,7 +77,7 @@ public class Dsa
         return 1;
     }
 
-   // 5
+   // problem 5
     public static int is235Array(int[] arr){
         int total = 0;
         for(int i=0;i<arr.length;i++){
@@ -89,7 +89,7 @@ public class Dsa
         return total == arr.length ? 1 : 0;
     }
 
-   // 6
+   // problem 6
     public static int largestPrimeFactor(int num){
         if (num <=1) return 0;
 
@@ -110,7 +110,7 @@ public class Dsa
         return 0;
     }
 
-   // 7
+   // problem 7
     public static int[] encodeNumber(int n){
 
         if(n<=1) return null;
@@ -132,7 +132,7 @@ public class Dsa
         return arrayToReturn;
     }
 
-    // 8
+    // problem 8
     static void doIntegerBasedRounding(int[] a, int n){
         if(n <= 0) return;
         for(int i = 0;i<a.length;i++){
@@ -146,7 +146,7 @@ public class Dsa
         }
     }
 
-    //9
+    // problem 9
     static int isCubePowerful(int n){
         if(n<=0) return 0;
 
@@ -161,7 +161,7 @@ public class Dsa
         return originalNum == totalSum ? 1 : 0;
     }
 
-    //10
+    // problem 10
     static int decodeArray(int[] array){
         int encodedNum = 0;
         for(int i=0; i<array.length-1; i++){
@@ -174,7 +174,7 @@ public class Dsa
         return encodedNum;
     }
 
-    //11
+    // problem 11
     static int checkMNSequence(int[] a, int m, int n){
         if(a[0] != m || a[a.length-1] != n) return 0;
 

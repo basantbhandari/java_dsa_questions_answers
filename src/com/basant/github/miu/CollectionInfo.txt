@@ -1,0 +1,100 @@
+ ============================
+ ArrayList (a)
+ ============================
+ => size => a.size();
+ => add => a.add(value);
+ => remove => a.remove(index);
+ => insert => a.add(index, value);
+ => modify => a.set(index, value);
+ => access => a.get(index);
+ => check empty => a.isEmpty();
+ => remove all elements => a.clear();
+ => remove selected elements => a.removeAll(new ArrayList(){value1, value2, value3,...});
+
+
+  ============================
+  HasSet (a)
+  ============================
+  => size => a.size();
+  => remove => a.remove(value);
+  => add => a.add(value);
+  => check empty => a.isEmpty();
+  => remove all elements => a.clear();
+
+
+
+  ============================
+  HashMap (a)
+  ============================
+  => size => a.size();
+  => add => a.put(key, value);
+  => remove => a.remove(key);
+  => all keys => a.keySet();
+  => all Values => a.values();
+  => get all pair => a.entrySet();
+  => access => a.get(key);
+  => get key from each entry => entry.getKey();
+  => get value from each entry => entry.getValue();
+  => modify => a.put(key, value);
+  => check empty => a.isEmpty();
+  => remove all elements => a.clear();
+
+
+  ============================
+  Arrays (a)
+  ============================
+  => sorting => Arrays.sort(array);
+  => size => a.length;
+  => get => a[index];
+
+  => append a new item to an array
+  int[] newArray = Arrays.copyOf(array, array.length + 1);
+  newArray[newArray.length - 1] = newItem;
+
+  or
+
+  int[] newArray = ArrayUtils.add(array, newItem);
+
+  => insert
+  int[] largerArray = ArrayUtils.insert(2, array, 77);
+
+  = compare two arrays
+  boolean areEqual = Arrays.equals(array1, array2);
+
+  => remove => a.remove(index);
+
+  => check empty
+  boolean isEmpty = array == null || array.length == 0;
+  or
+  boolean isEmpty = ArrayUtils.isEmpty(array);
+
+  => Shuffle
+  ArrayUtils.shuffle(array);
+
+  => Remove Duplicates from an Array
+
+  // Box
+  Integer[] list = ArrayUtils.toObject(array);
+  // Remove duplicates
+  Set<Integer> set = new HashSet<Integer>(Arrays.asList(list));
+  // Create array and unbox
+  return ArrayUtils.toPrimitive(set.toArray(new Integer[set.size()]));
+
+  => Print an Array
+  String arrayAsString = ArrayUtils.toString(array);
+
+
+  ============================
+  Strings (a)
+  ============================
+  => length => a.length();
+  => join string
+    a1 + a2;
+    a1.concat(a2);
+  => equals
+    a1.equals(a2);
+    a1.equalsIgnoreCase(a2);
+    a1.contains(a2);
+    a1.substring(startIndex, endIndex);
+    a1.replace(fromString, toString);
+
