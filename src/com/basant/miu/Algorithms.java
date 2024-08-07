@@ -224,7 +224,7 @@ public class Algorithms {
             return null;
         if (firstArray.length == 0 || secondArray.length == 0)
             return Arrays.toString(new int[0]);
-        int min = (firstArray.length < secondArray.length) ? firstArray.length : secondArray.length;
+        int min = firstArray.length < secondArray.length ? firstArray.length : secondArray.length;
 
         int[] firstClone, secondClone;
         if (min == firstArray.length) {
@@ -336,16 +336,11 @@ public class Algorithms {
 
     * */
     static int nextPerfectSquare(int number) {
-        int nextPerfectSquare = 0;
-
-        if (number >= 0) {
-            double sqrtResult = Math.sqrt(number);
-            int baseNumber = (int) sqrtResult;
-            int nextNumber = baseNumber + 1;
-            nextPerfectSquare = (int) Math.pow(nextNumber, 2);
+        int nextPerfectNumber = 0;
+        while(nextPerfectNumber * nextPerfectNumber < number){
+            nextPerfectNumber++;
         }
-
-        return nextPerfectSquare;
+        return nextPerfectNumber * nextPerfectNumber;
     }
 
 
@@ -494,10 +489,11 @@ public class Algorithms {
     * */
 
     static int isMeera(int[] a) {
-        int isMeeraArray = 0;
+        int isMeeraArray = 1;
 
         for (int i = 0; i < a.length; i++) {
             if (a[i] == 1 || a[i] == 9) {
+                isMeeraArray = 0;
                 if (a[i] == 1) {
                     for (int j = i; j < a.length; j++) {
                         if (a[j] == 9) {
@@ -520,7 +516,6 @@ public class Algorithms {
         }
         return isMeeraArray;
     }
-
     /*
     * Question 12
     A Bean array is defined to be an integer array where for every value n in the array,
