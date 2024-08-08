@@ -4,7 +4,13 @@ public class SystematicallyIncreasing {
 
     /**
      * Checks if the given array is systematically increasing.
-     *
+     * eg,
+     * 1
+     * 1,2
+     * 1,2,3
+     * 1,2,3,4
+     * 1,2,3,4,5
+     * so on
      * @param a the array to check
      * @return 1 if the array is systematically increasing, otherwise 0
      */
